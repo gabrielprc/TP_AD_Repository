@@ -1,6 +1,7 @@
 package rmi.tda;
 
 import java.rmi.Remote;
+import java.util.Date;
 import java.util.List;
 
 import views.cargas.CargaView;
@@ -73,4 +74,16 @@ public interface TDAControladorPrincipal extends Remote {
 	public void realizarPago(Integer idPago) throws Exception;
 
 	public void realizarCobroParcial(Integer idFactura, Float monto) throws Exception;
+
+	public SucursalView obtenerSucursal(Integer idSucDestino);
+
+	public Date fechaProbableLlegada(Integer id);
+
+	public void cancelarCarga(Integer idCarga);
+
+	public List<EmpleadoView> obtenerChoferes();
+
+	public ViajeView obtenerViajeActivo(Integer idChofer);
+
+	public void registrarParada(Integer idParada) throws Exception;
 }
