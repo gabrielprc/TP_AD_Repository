@@ -75,15 +75,15 @@ public interface TDAControladorPrincipal extends Remote {
 
 	public void realizarCobroParcial(Integer idFactura, Float monto) throws Exception;
 
-	public SucursalView obtenerSucursal(Integer idSucDestino);
+	public SucursalView obtenerSucursal(Integer idSucDestino) throws Exception;
 
-	public Date fechaProbableLlegada(Integer id);
+	public Date fechaProbableLlegada(Integer id) throws Exception;
 
-	public void cancelarCarga(Integer idCarga);
+	public void cancelarCarga(Integer idCarga) throws Exception;
 
-	public List<EmpleadoView> obtenerChoferes();
+	public List<EmpleadoView> obtenerChoferes() throws Exception;
 
-	public ViajeView obtenerViajeActivo(Integer idChofer);
+	public ViajeView obtenerViajeActivo(Integer idChofer) throws Exception;
 
 	public void registrarParada(Integer idParada) throws Exception;
 }
